@@ -1,0 +1,39 @@
+@import url(./jquery.nestable.css);
+.dd-content-item {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dd-content-item>.dd-content-item-left {
+    width: 80%-50px;
+    overflow: hidden;
+}
+
+.dd-content-item>.dd-content-item-right {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dd-content-item>.dd-content-item-right>span {
+    padding: 0 4px;
+}
+
+.dd-content-item>.dd-content-item-right>.add>i:hover {
+    color: green;
+}
+
+.dd-content-item>.dd-content-item-right>.mod>i:hover {
+    color: yellow;
+}
+
+.dd-content-item>.dd-content-item-right>.del>i:hover {
+    color: red;
+}
+
+.dd-content-item>.dd-content-item-right>.click {
+    color: red;
+}

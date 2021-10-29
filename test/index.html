@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="lt-ie9"> <![endif]-->
+<!--[if IE 9]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Nestable</title>
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css"></link>
+    <link href="../css/jquery.nestable-plus.css" rel="stylesheet" type="text/css"></link>
+    <style type="text/css">
+        .nestable-lists {
+            width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Nestable</h1>
+    <div class="nestable-lists" id="wrapper">
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="../js/jquery.nestable.js"></script>
+    <script src="../js/jquery.nestable-plus.js"></script>
+    <script>
+        var testdata = {
+            data: [{
+                id: 1,
+                name: '研究部',
+                allowAdd: true,
+                allowDel: true,
+                allowMod: true,
+                children: [{
+                    id: 5,
+                    name: '总经理'
+                }, {
+                    id: 6,
+                    name: '研究员'
+                }]
+            }, {
+                id: 2,
+                name: '风险控制部',
+                allowAdd: true,
+                allowDel: true,
+                allowMod: true,
+                children: [{
+                    id: 7,
+                    name: '总经理'
+                }, {
+                    id: 8,
+                    name: '助理',
+                    children: [{
+                        id: 9,
+                        name: '助理组长'
+                    }, {
+                        id: 10,
+                        name: '助理成员'
+                    }]
+                }, {
+                    id: 11,
+                    name: '检查员'
+                }]
+            }, {
+                id: 3,
+                name: '监察稽核部',
+                allowAdd: true,
+                allowDel: true,
+                allowMod: true,
+                children: [{
+                    id: 12,
+                    name: '总经理'
+                }, {
+                    id: 13,
+                    name: '稽核员'
+                }]
+            }, {
+                id: 4,
+                name: '投资交易室',
+                allowAdd: true,
+                allowDel: true,
+                allowMod: true,
+                children: [{
+                    id: 14,
+                    name: '总经理'
+                }, {
+                    id: 15,
+                    name: '研究员'
+                }]
+            }]
+        }
+        $('#wrapper').nestablePlus('abc', testdata);
+    </script>
+</body>
+
+</html>
